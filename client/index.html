@@ -61,8 +61,13 @@
     <script src="js/app/models/Negociacao.js"></script>
     <script>
         var n1 = new Negociacao(new Date(),5,700);
-        var data = n1.data;
-        console.log(data);
+        n1._quantidade = 100000000000;
+        // var data = n1.data;
+        // console.log(data);
+        var amanha = new Date();
+        amanha.setDate(11);
+        n1.data = amanha;
+        console.log(n1.data);        
         var quantidade = n1.quantidade;
         console.log(quantidade);
         var valor = n1.valor;
